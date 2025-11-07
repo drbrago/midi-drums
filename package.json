@@ -1,0 +1,16 @@
+{
+  "name": "midi-drums",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "drumseed": "./src/cli/index.js"
+  },
+  "scripts": {
+    "render": "node ./src/cli/index.js render --seed seeds/techno_core_001.json --out packs --genre techno --loops 4 --pipeline foundation",
+    "recipes": "node ./src/cli/index.js recipes"
+  },
+  "dependencies": {
+    "yargs": "^18.0.0"
+  }
+}
