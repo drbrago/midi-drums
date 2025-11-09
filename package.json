@@ -8,7 +8,12 @@
   },
   "scripts": {
     "render": "node ./src/cli/index.js render --seed seeds/techno_core_001.json --out packs --genre techno --loops 4 --pipeline foundation",
-    "recipes": "node ./src/cli/index.js recipes"
+    "recipes": "node ./src/cli/index.js recipes",
+    "build:all": "node ./src/cli/buildAll.js --out packs --loops 4",
+    "build:all:clean": "rm -rf packs && node ./src/cli/buildAll.js --out packs --loops 4",
+    "build:include": "node ./src/cli/buildAll.js --out packs --loops 4 --include=minimalize,ghostSnare,ride",
+    "build:exclude": "node ./src/cli/buildAll.js --out packs --loops 4 --exclude=swingDrunk,humanizeChaotic",
+    "build:fast": "node ./src/cli/buildAll.js --out packs --loops 2 --exclude=swingDrunk,humanizeChaotic"
   },
   "dependencies": {
     "yargs": "^18.0.0"
